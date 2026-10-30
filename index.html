@@ -30,7 +30,12 @@
     background: var(--card); border: 1px solid var(--line); border-radius: 10px;
     padding: 8px;
   }
-  .frame iframe { display: block; width: 100%; height: 75vh; min-height: 480px; border: 0; }
+  .frame iframe { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border: 0; }
+  .open { margin: 16px 0 0; text-align: center; }
+  .open a {
+    display: inline-block; padding: 10px 18px; border-radius: 8px;
+    background: var(--primary); color: var(--bg); text-decoration: none; font-weight: bold;
+  }
   footer { margin-top: 22px; color: var(--muted); font-size: .85rem; }
 </style>
 </head>
@@ -42,10 +47,10 @@
   <p class="description">
     Tablero interactivo sobre las notificaciones de cáncer infantil notificados al Sistema de Vigilancia
     en Salud Pública (SIVIGILA). Explora el perfil sociodemográfico, la distribución geográfica
-    por departamento de notificación y la tendencia temporal entre 2014 y 2024.
+    por departamento de notificación y la tendencia tempora etre 2014 y 2024.
   </p>
 
-  <p class="authors"><strong>Autores:</strong> Ximena Acero · Sebastian Briceño</p>
+  <p class="authors"><strong>Autores:</strong> Ximena Acero · Sebastián Briceño</p>
 
   <section class="frame" aria-label="Tablero de Power BI">
       <!-- PEGA AQUÍ el enlace del informe: reemplaza todo el texto entre comillas de src
@@ -57,6 +62,10 @@
         allowFullScreen="true">
       </iframe>
   </section>
+
+  <p class="open">
+    <a href="https://app.powerbi.com/view?r=eyJrIjoiYTM2OWEwNGYtMjJhYy00YTM5LThjZGUtNzM3NzE1OTZkNGQ1IiwidCI6ImRhZjc5OTBlLThhM2YtNDA5Yy05Yjc2LTJhNTQ3NTA5ODAwMCIsImMiOjR9" target="_blank" rel="noopener">Abrir el tablero en pantalla completa</a>
+  </p>
 
   <footer>Fuente de datos: SIVIGILA, Instituto Nacional de Salud (Colombia).</footer>
 </main>
